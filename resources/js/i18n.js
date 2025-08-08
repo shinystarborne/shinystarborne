@@ -1,0 +1,67 @@
+import { createI18n } from 'vue-i18n';
+
+const messages = {
+    en: {
+        welcome: 'Welcome',
+        home: 'Home',
+        blog: 'Blog',
+        about: 'About',
+        contact: 'Contact',
+        categories: 'Categories',
+        search: 'Search',
+        read_more: 'Read More',
+        language: 'Language',
+        select_language: 'Select Language',
+        latest_posts: 'Latest Posts',
+        featured_posts: 'Featured Posts',
+        all_posts: 'All Posts',
+        no_posts: 'No posts available',
+        by_author: 'By {author}',
+        published_on: 'Published on {date}',
+    },
+    ru: {
+        welcome: 'Добро пожаловать',
+        home: 'Главная',
+        blog: 'Блог',
+        about: 'О нас',
+        contact: 'Контакты',
+        categories: 'Категории',
+        search: 'Поиск',
+        read_more: 'Читать далее',
+        language: 'Язык',
+        select_language: 'Выбрать язык',
+        latest_posts: 'Последние записи',
+        featured_posts: 'Избранные записи',
+        all_posts: 'Все записи',
+        no_posts: 'Нет доступных записей',
+        by_author: 'Автор: {author}',
+        published_on: 'Опубликовано {date}',
+    },
+    de: {
+        welcome: 'Willkommen',
+        home: 'Startseite',
+        blog: 'Blog',
+        about: 'Über uns',
+        contact: 'Kontakt',
+        categories: 'Kategorien',
+        search: 'Suche',
+        read_more: 'Weiterlesen',
+        language: 'Sprache',
+        select_language: 'Sprache wählen',
+        latest_posts: 'Neueste Beiträge',
+        featured_posts: 'Empfohlene Beiträge',
+        all_posts: 'Alle Beiträge',
+        no_posts: 'Keine Beiträge verfügbar',
+        by_author: 'Von {author}',
+        published_on: 'Veröffentlicht am {date}',
+    },
+};
+
+const i18n = createI18n({
+    legacy: false,
+    locale: localStorage.getItem('locale') || 'en',
+    fallbackLocale: 'en',
+    messages,
+});
+
+export default i18n;
